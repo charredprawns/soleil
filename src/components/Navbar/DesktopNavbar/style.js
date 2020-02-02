@@ -1,8 +1,17 @@
 export default theme => ({
-  root: {
-    background: theme.overrides.White
+  navWrapper: {
+    marginBottom: '64px'
   },
-  list: {
-    width: 250
+  menuItems: {
+    display: 'grid',
+    gridTemplateColumns: 'auto auto',
+    gridColumnGap: '1em',
+    width: '100%'
+  },
+  menuButton: {
+    padding: '10px'
+  },
+  menuIcon: {
+    paddingRight: '0.25em'
   }
 })

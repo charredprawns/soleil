@@ -1,8 +1,9 @@
 export default {
-  Primary: '#fb8c00',
-  Secondary: '#00796b',
+  Primary: '#659DBD',
+  Secondary: '#8D8741',
   Black: '#000000',
   White: '#FFFFFF',
+  DrawerWidth: '240px',
   desktop: {},
   tablet: {
     // Values for the above colors that are to be set ONLY on desktop

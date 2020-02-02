@@ -1,11 +1,12 @@
 import React from 'react'
-
-import { PersonFeature } from 'components'
+import { Typography } from '@material-ui/core'
 
 const Home = ({ classes }) => {
   return (
     <div>
-      <PersonFeature shouldSpin />
+      <Typography variant='h1' align='center'>
+        Welcome to Soliel
+      </Typography>
     </div>
   )
 }

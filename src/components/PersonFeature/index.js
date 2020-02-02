@@ -3,8 +3,7 @@ import styles from './styles'
 import { withStyles, Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
-import mainImage from 'assets/flower.png'
-
+import mainImage from 'assets/goat.jpg'
 /**
  *
  * @param {Boolean} shouldSpin Should the spinning animation be active?

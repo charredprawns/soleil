@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from './style'
 import {
   withStyles,
   AppBar,
   Toolbar,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-  Drawer
+  Button,
+  Typography
 } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import MailIcon from '@material-ui/icons/Mail'
+import HomeIcon from '@material-ui/icons/Home'
+import LockIcon from '@material-ui/icons/Lock'
 import PropTypes from 'prop-types'
 
 /**
@@ -21,51 +16,22 @@ import PropTypes from 'prop-types'
 */
 
 const DesktopNavbar = ({ classes }) => {
-  const [open, setOpen] = useState(false)
-
-  const sideList = () => (
-    <div
-      className={classes.list}
-      role='presentation'
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <MailIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-    </div>
-  )
-
-  const toggleDrawer = isOpen => event => {
-    if (
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
-    ) {
-      return
-    }
-    setOpen(isOpen)
-  }
-
   return (
-    <div>
-      <AppBar>
+    <div className={classes.navWrapper}>
+      <AppBar position='fixed'>
         <Toolbar>
-          <IconButton onClick={toggleDrawer(true)}>
-            <MenuIcon />
-          </IconButton>
+          <div className={classes.menuItems}>
+            <Button className={classes.menuButton}>
+              <HomeIcon fontSize='small' className={classes.menuIcon} />
+              <Typography> Home</Typography>
+            </Button>
+            <Button className={classes.menuButton}>
+              <LockIcon fontSize='small' className={classes.menuIcon} />
+              <Typography> Login</Typography>
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
-        {sideList()}
-      </Drawer>
     </div>
   )
 }

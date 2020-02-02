@@ -1,0 +1,2 @@
+(this.webpackJsonplinc_webtech=this.webpackJsonplinc_webtech||[]).push([[0],{37:function(e,n,t){"use strict";t.r(n);var c=t(0),s=t.n(c),a=t(40);n.default=function(e){e.classes;return s.a.createElement("div",null,s.a.createElement(a.b,{shouldSpin:!0}))}}}]);
+//# sourceMappingURL=0.bd758885.chunk.js.map
