@@ -3,7 +3,7 @@ export default {
   Secondary: '#8D8741',
   Black: '#000000',
   White: '#FFFFFF',
-  DrawerWidth: '240px',
+  maxContentWidth: '1400px',
   desktop: {},
   tablet: {
     // Values for the above colors that are to be set ONLY on desktop

@@ -3,6 +3,8 @@ import { useTheme, useMediaQuery } from '@material-ui/core'
 import DesktopPortfolio from './DesktopPortfolio'
 import MobilePortfolio from './MobilePortfolio'
 
+import projects from 'assets/recentProjects'
+
 const Portfolio = props => {
   const theme = useTheme()
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'))
@@ -10,9 +12,9 @@ const Portfolio = props => {
   return (
     <>
       {isDesktop ? (
-        <DesktopPortfolio {...props} />
+        <DesktopPortfolio {...props} projects={projects} />
       ) : (
-        <MobilePortfolio {...props} />
+        <MobilePortfolio {...props} projects={projects} />
       )}
     </>
   )

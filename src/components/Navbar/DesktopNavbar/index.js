@@ -24,9 +24,11 @@ const DesktopNavbar = ({ classes }) => {
             <img src={logo} alt='linc web tech logo' className={classes.logo} />
           </Link>
           <div className={classes.menuItems}>
-            <Button href='/portfolio' className={classes.menuButton}>
-              <Typography>Portfolio</Typography>
-            </Button>
+            <Link to='/portfolio' className={classes.link}>
+              <Button className={classes.menuButton}>
+                <Typography>Portfolio</Typography>
+              </Button>
+            </Link>
             <Button className={classes.menuButton}>
               <Typography> Blog</Typography>
             </Button>

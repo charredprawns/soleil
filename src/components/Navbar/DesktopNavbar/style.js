@@ -19,6 +19,9 @@ export default theme => ({
     padding: '10px',
     textTransform: 'Capitalize'
   },
+  link: {
+    textDecoration: 'none !important'
+  },
   menuIcon: {
     paddingRight: '0.25em'
   }
