@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './style'
-import { withStyles } from '@material-ui/core'
+import { withStyles, Typography } from '@material-ui/core'
 import PropTypes from 'prop-types'
 
 /**
@@ -8,7 +8,11 @@ import PropTypes from 'prop-types'
 */
 
 const MobileTemplate = ({ classes }) => {
-  return <div />
+  return (
+    <div>
+      <Typography>Mobile Template</Typography>
+    </div>
+  )
 }
 
 MobileTemplate.propTypes = {

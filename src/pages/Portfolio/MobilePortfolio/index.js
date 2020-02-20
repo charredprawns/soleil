@@ -7,16 +7,16 @@ import PropTypes from 'prop-types'
 @param {classes} Object: Used to define style classes. DOCUMENT YOUR CODE! :)
 */
 
-const DesktopTemplate = ({ classes }) => {
+const MobilePortfolio = ({ classes }) => {
   return (
     <div>
-      <Typography>Desktop Template</Typography>
+      <Typography>Mobile Portfolio</Typography>
     </div>
   )
 }
 
-DesktopTemplate.propTypes = {
+MobilePortfolio.propTypes = {
   classes: PropTypes.object
 }
 
-export default withStyles(style)(DesktopTemplate)
+export default withStyles(style)(MobilePortfolio)

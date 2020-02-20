@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './style'
+import PropTypes from 'prop-types'
 import {
   withStyles,
   AppBar,
@@ -7,10 +8,9 @@ import {
   Button,
   Typography
 } from '@material-ui/core'
-import HomeIcon from '@material-ui/icons/Home'
-import LockIcon from '@material-ui/icons/Lock'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
+import logo from 'assets/LincWebTech.svg'
 /**
 @param {classes} Object: Used to define style classes. DOCUMENT YOUR CODE! :)
 */
@@ -18,16 +18,20 @@ import PropTypes from 'prop-types'
 const DesktopNavbar = ({ classes }) => {
   return (
     <div className={classes.navWrapper}>
-      <AppBar position='fixed'>
+      <AppBar position='fixed' classes={{ root: classes.menuBar }}>
         <Toolbar>
+          <Link to='/'>
+            <img src={logo} alt='linc web tech logo' className={classes.logo} />
+          </Link>
           <div className={classes.menuItems}>
-            <Button className={classes.menuButton}>
-              <HomeIcon fontSize='small' className={classes.menuIcon} />
-              <Typography> Home</Typography>
+            <Button href='/portfolio' className={classes.menuButton}>
+              <Typography>Portfolio</Typography>
             </Button>
             <Button className={classes.menuButton}>
-              <LockIcon fontSize='small' className={classes.menuIcon} />
-              <Typography> Login</Typography>
+              <Typography> Blog</Typography>
+            </Button>
+            <Button className={classes.menuButton}>
+              <Typography> Contact</Typography>
             </Button>
           </div>
         </Toolbar>
