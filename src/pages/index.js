@@ -6,5 +6,9 @@ export default [
   {
     name: 'Portfolio',
     path: '/portfolio'
+  },
+  {
+    name: 'Move',
+    path: '/move'
   }
 ]

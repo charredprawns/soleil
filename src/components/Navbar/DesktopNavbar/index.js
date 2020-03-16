@@ -29,6 +29,11 @@ const DesktopNavbar = ({ classes }) => {
                 <Typography>Portfolio</Typography>
               </Button>
             </Link>
+            <Link to='/move' className={classes.link}>
+              <Button className={classes.menuButton}>
+                <Typography>Move</Typography>
+              </Button>
+            </Link>
             <Button className={classes.menuButton}>
               <Typography> Blog</Typography>
             </Button>
