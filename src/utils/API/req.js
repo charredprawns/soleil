@@ -3,13 +3,11 @@ const { REACT_APP_BACKEND } = process.env
 
 export default async (
   HTTPMethod = 'GET',
-  endpoint = '/v1/user/login',
+  endpoint = '/v1/category/endpoint',
   params = {},
   useCaching = false,
   mediaRequest = false
 ) => {
-  // attempt to send the request
-
   try {
     // build the request
     let requestURL = `${REACT_APP_BACKEND}/api${endpoint}`

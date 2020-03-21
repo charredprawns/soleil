@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { req } from 'utils/API'
 import styles from './styles'
 import { Typography, withStyles } from '@material-ui/core'
+import { Listing } from 'components'
 
 const Mongo = ({ classes }) => {
+  const [listings, setListings] = useState([])
+  useEffect(() => {
+    const getListings = async () => {
+      const result = await req('GET', '/v1/airbnb/listing', {
+        numberOfListings: 10
+      })
+      if (result.status === 'success') {
+        setListings(result)
+      }
+    }
+    getListings()
+  }, [])
+
   return (
     <div className={classes.container}>
       <Typography
-        variant='body-1'
+        variant='body1'
         align='center'
         className={classes.intro_paragraph}
       >
@@ -14,6 +29,19 @@ const Mongo = ({ classes }) => {
         Below are examples of sample data being used in varipous React.js
         Components.
       </Typography>
+
+      <div className={classes.listings_grid}>
+        {listings &&
+          Object.entries(listings).map(listing => {
+            console.log(listing)
+            return (
+              <Listing
+                listingData={listing}
+                className={classes.listing_wrapper}
+              />
+            )
+          })}
+      </div>
     </div>
   )
 }

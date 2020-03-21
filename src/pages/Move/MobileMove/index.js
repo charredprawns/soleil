@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 const MobileMove = ({ classes }) => {
   return (
     <div>
-      <Typography>Mobile Portfolio</Typography>
+      <Typography>Mobile Move</Typography>
     </div>
   )
 }
