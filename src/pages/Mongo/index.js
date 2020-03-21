@@ -9,7 +9,7 @@ const Mongo = ({ classes }) => {
   useEffect(() => {
     const getListings = async () => {
       const result = await req('GET', '/v1/airbnb/listing', {
-        numberOfListings: 10
+        numberOfListings: 25
       })
       if (result.status === 'success') {
         setListings(result)
@@ -26,21 +26,23 @@ const Mongo = ({ classes }) => {
         className={classes.intro_paragraph}
       >
         This page utilizes mongodb sample data from the mongoDB Atlas free API.
-        Below are examples of sample data being used in varipous React.js
+        Below are examples of sample data being used in various React.js
         Components.
       </Typography>
 
       <div className={classes.listings_grid}>
         {listings &&
-          Object.entries(listings).map(listing => {
-            console.log(listing)
-            return (
-              <Listing
-                listingData={listing}
-                className={classes.listing_wrapper}
-              />
-            )
-          })}
+          Object.entries(listings)
+            .filter(x => x[0] !== 'status')
+            .map(listing => {
+              console.log(listing)
+              return (
+                <Listing
+                  listingData={listing}
+                  className={classes.listing_wrapper}
+                />
+              )
+            })}
       </div>
     </div>
   )

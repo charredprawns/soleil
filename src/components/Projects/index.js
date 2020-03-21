@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './styles'
 import PropTypes from 'prop-types'
 import { withStyles, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
 
 /**
 @param {classes} Object: Used to define style classes. DOCUMENT YOUR CODE! :)
