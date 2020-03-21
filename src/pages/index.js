@@ -10,5 +10,9 @@ export default [
   {
     name: 'Move',
     path: '/move'
+  },
+  {
+    name: 'Sort',
+    path: '/sort'
   }
 ]

@@ -7,7 +7,7 @@ export default theme => ({
     padding: '0.5em'
   },
   navWrapper: {
-    marginBottom: '64px'
+    paddingBottom: '64px'
   },
   menuItems: {
     display: 'flex',

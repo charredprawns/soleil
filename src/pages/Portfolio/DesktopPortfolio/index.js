@@ -11,7 +11,10 @@ import { Projects } from 'components'
 const DesktopPortfolio = ({ classes, projects }) => {
   return (
     <div>
-      <Typography>Desktop Portfolio</Typography>
+      <Typography className={classes.intro_paragraph}>
+        These are all projects of independent small businesses that I have
+        worked on over the years.
+      </Typography>
       <Projects projects={projects} />
     </div>
   )
