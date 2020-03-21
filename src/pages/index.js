@@ -14,5 +14,9 @@ export default [
   {
     name: 'Sort',
     path: '/sort'
+  },
+  {
+    name: 'Mongo',
+    path: '/mongo'
   }
 ]
