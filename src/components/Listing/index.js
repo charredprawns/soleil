@@ -25,7 +25,6 @@ const IconWithNumber = ({ classes, icon, data }) => {
 }
 
 const Listing = ({ classes, listingData, className }) => {
-  console.log(listingData[1])
   return (
     <Paper elevation={5} className={clsx(classes.container, className)}>
       <Typography

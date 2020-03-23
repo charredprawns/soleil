@@ -35,7 +35,6 @@ const Mongo = ({ classes }) => {
           Object.entries(listings)
             .filter(x => x[0] !== 'status')
             .map(listing => {
-              console.log(listing)
               return (
                 <Listing
                   listingData={listing}

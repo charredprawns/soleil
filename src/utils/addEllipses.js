@@ -1,5 +1,5 @@
 export default (stringData, numberOfChars) => {
-  if (stringData.length > 25) {
+  if (stringData.length > numberOfChars) {
     return `${stringData.slice(0, numberOfChars)}...`
   } else return stringData
 }

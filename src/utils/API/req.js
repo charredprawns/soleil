@@ -1,4 +1,4 @@
-// import { generateError } from 'utils'
+import { generateError } from 'utils'
 const { REACT_APP_BACKEND } = process.env
 
 export default async (
@@ -31,11 +31,10 @@ export default async (
 
     // return any errors
   } catch (e) {
-    return console.log(e)
-    // generateError(
-    //   'Server Error',
-    //   "We weren't able to properly communicate with the Servers! " +
-    //     'Please try again later.'
-    // )
+    generateError(
+      'Server Error',
+      "We weren't able to properly communicate with the Servers! " +
+        'Please try again later.'
+    )
   }
 }
