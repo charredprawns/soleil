@@ -71,9 +71,9 @@ const Move = props => {
           break
       }
     }
-    window.addEventListener('keypress', handleKeypress)
+    window.addEventListener('keydown', handleKeypress)
 
-    return () => window.removeEventListener('keypress', handleKeypress)
+    return () => window.removeEventListener('keydown', handleKeypress)
   })
 
   const styles = useStyles({ itemX, itemY })
