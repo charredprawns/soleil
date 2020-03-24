@@ -16,5 +16,14 @@ export default theme => ({
     width: '300px',
     height: '150px'
   },
-  projectText: {}
+  [theme.tablet]: {
+    grid: {
+      gridTemplateColumns: '1fr 1fr'
+    }
+  },
+  [theme.mobile]: {
+    grid: {
+      gridTemplateColumns: '1fr'
+    }
+  }
 })

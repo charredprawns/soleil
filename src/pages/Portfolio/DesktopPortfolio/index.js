@@ -21,7 +21,8 @@ const DesktopPortfolio = ({ classes, projects }) => {
 }
 
 DesktopPortfolio.propTypes = {
-  classes: PropTypes.object
+  classes: PropTypes.object,
+  projects: PropTypes.array
 }
 
 export default withStyles(style)(DesktopPortfolio)

@@ -25,5 +25,10 @@ export default theme => ({
   },
   link: {
     marginTop: 'auto'
+  },
+  title: {
+    marginTop: '0.5em',
+    fontSize: '1em',
+    fontWeight: 'bold'
   }
 })
