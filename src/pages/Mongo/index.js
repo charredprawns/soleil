@@ -33,10 +33,12 @@ const Mongo = ({ classes }) => {
       <div className={classes.listings_grid}>
         {listings &&
           Object.entries(listings)
+            // Remove the status indicator returned from the API
             .filter(x => x[0] !== 'status')
-            .map(listing => {
+            .map((listing, i) => {
               return (
                 <Listing
+                  key={i}
                   listingData={listing}
                   className={classes.listing_wrapper}
                 />

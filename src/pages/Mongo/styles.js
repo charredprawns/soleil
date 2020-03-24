@@ -10,5 +10,17 @@ export default theme => ({
   listings_grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)'
+  },
+  [theme.tablet]: {
+    listings_grid: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr'
+    }
+  },
+  [theme.mobile]: {
+    listings_grid: {
+      display: 'grid',
+      gridTemplateColumns: '1fr'
+    }
   }
 })
