@@ -39,12 +39,6 @@ const DesktopNavbar = ({ classes }) => {
                 <Typography>Mongo</Typography>
               </Button>
             </Link>
-            <Button className={classes.menuButton}>
-              <Typography> Blog</Typography>
-            </Button>
-            <Button className={classes.menuButton}>
-              <Typography> Contact</Typography>
-            </Button>
           </div>
         </Toolbar>
       </AppBar>

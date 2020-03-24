@@ -27,7 +27,7 @@ const MobileMove = ({
 }) => {
   return (
     <div>
-      <Typography>Mobile Move</Typography>
+      <Typography align='center'>Mobile Move</Typography>
       <img src={item} alt='item controlled by keys' className={styles.item} />
       <div className={classes.mobile_button_bar}>
         <IconButton aria-label='up' onClick={handleUpMove}>
