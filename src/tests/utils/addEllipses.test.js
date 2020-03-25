@@ -1,4 +1,4 @@
-import addEllipses from './addEllipses.js'
+import { addEllipses } from 'utils'
 
 test('adds ellipses to end of string', () => {
   expect(

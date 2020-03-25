@@ -1,4 +1,4 @@
-import hexToRgb from './hexToRgb.js'
+import { hexToRgb } from 'utils'
 
 test('Successfully convert hex to RGB value', () => {
   expect(hexToRgb('#000000')).toBe('0, 0, 0')
