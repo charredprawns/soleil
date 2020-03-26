@@ -26,7 +26,6 @@ const IconWithNumber = ({ classes, icon, data }) => {
 
 const Listing = ({ classes, listingData, className }) => {
   const placeholder = 'https://source.unsplash.com/random/300x150'
-  console.log(listingData)
   return (
     <Paper elevation={5} className={clsx(classes.container, className)}>
       <img alt='random from unsplash' src={placeholder} />
