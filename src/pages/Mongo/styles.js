@@ -11,6 +11,10 @@ export default theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)'
   },
+  progress_wrapper: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
   [theme.tablet]: {
     listings_grid: {
       display: 'grid',
